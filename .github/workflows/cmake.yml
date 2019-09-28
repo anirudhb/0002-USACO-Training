@@ -1,0 +1,17 @@
+name: CMake
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: cmake setup build directory
+      run: mkdir cmake-build
+    - name: cmake
+      run: cd cmake-build && cmake ..
+    - name: make
+      run: cd cmake-build && make
