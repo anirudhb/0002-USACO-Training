@@ -1,0 +1,7 @@
+code:
+  - *.cc
+cmake:
+  - CMakeLists.txt
+git:
+  - .git*
+  - .git/**
