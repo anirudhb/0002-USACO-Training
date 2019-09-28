@@ -28,7 +28,7 @@ int lookup_days_in_month(int month, int year)
     if (month == 1)
         return is_leap ? 29 : 28;
     /* feb empty since handled above */
-    int lookup[] = { 31, 0, 31, 30, 30, 31, 31, 30, 31, 30, 31 };
+    int lookup[] = { 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     return lookup[month];
 }
 
@@ -42,8 +42,8 @@ std::array<int, 7> get_thirteenths(int N)
     /* 0 = january, 1 = february, ... */
     int month = 0;
     int day = 1;
-    /* 0 = sunday, 1 = monday, ... */
-    int weekday = 1;
+    /* 0 = saturday, 1 = sunday, ... */
+    int weekday = 2;
     int year = 1900;
     int target_year = 1900+N-1;
     while (year <= target_year)
