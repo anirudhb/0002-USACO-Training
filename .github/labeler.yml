@@ -1,5 +1,5 @@
 code:
-  - *.cc
+  - "*.cc"
 cmake:
   - CMakeLists.txt
 git:
